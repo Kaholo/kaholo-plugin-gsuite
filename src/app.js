@@ -16,7 +16,7 @@ function _authorize(action) {
         scope: scope,
         refresh_token: action.params.REFRESH_TOKEN
     }
-    // return oauth2Client;
+
     return google.admin({ 
         version: 'directory_v1', 
         auth : oauth2Client
@@ -38,7 +38,8 @@ function createUser(action) {
                 givenName: action.params.GIVEN_NAME
             },
             password: action.params.PASSWORD,
-            primaryEmail: action.params.PRIMARY_EMAIL
+            primaryEmail: action.params.PRIMARY_EMAIL,
+            changePasswordAtNextLogin: action.params.CHANGE_PASSWORD_NEXT_LOGIN
         }
     
         const service = _authorize(action);
@@ -61,14 +62,13 @@ function _addUserToGroup(service, groupKey, user) {
             if(err){
                 return reject(err)
             }
-            resolve()
+            resolve(res)
         });
     })
 }
 
 function addUserToGroup(action) {
-    const auth = _authorize(action);
-    const service = google.admin({ version: 'directory_v1', auth });
+    const service =_authorize(action);
     return _addUserToGroup(service, action.params.GROUP_KEY, {
         email: action.params.PRIMARY_EMAIL
     });

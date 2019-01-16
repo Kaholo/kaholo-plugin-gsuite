@@ -74,6 +74,11 @@
             "type": "string"
           },
           {
+            "name": "CHANGE_PASSWORD_NEXT_LOGIN",
+            "viewName": "Change password at next login",
+            "type": "boolean"
+          },
+          {
             "name": "PRIMARY_EMAIL",
             "viewName": "Primary Email",
             "type": "string"
