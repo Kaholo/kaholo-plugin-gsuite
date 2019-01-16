@@ -16,7 +16,11 @@ function _authorize(action) {
         scope: scope,
         refresh_token: action.params.REFRESH_TOKEN
     }
-    return oauth2Client;
+    // return oauth2Client;
+    return google.admin({ 
+        version: 'directory_v1', 
+        auth : oauth2Client
+    });
 }
 
 function _handleParams(param) {
@@ -37,8 +41,7 @@ function createUser(action) {
             primaryEmail: action.params.PRIMARY_EMAIL
         }
     
-        const auth = _authorize(action);
-        const service = google.admin({ version: 'directory_v1', auth });
+        const service = _authorize(action);
         return service.users.insert({ resource: user },(err,res) => {
             if(err){
                 return reject(err)
