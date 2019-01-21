@@ -1,0 +1,135 @@
+{
+    "name": "G-suite",
+    "type": "executer",
+    "imgUrl": "G+Suite.png",
+    "execProgram": "node",
+    "main": "app.js",
+    "version": "1.2.0",
+    "description": "",
+    "settings":[
+      {
+        "name":"ACCESS_TOKEN",
+        "viewName":"Access Token",
+        "type":"vault"
+      },
+      {
+        "name":"REFRESH_TOKEN",
+        "viewName":"Refresh Token",
+        "type":"vault"
+      },
+      {
+        "name":"Client Secret",
+        "viewName":"Client Secret",
+        "type":"vault"
+      },
+      {
+        "name":"CLIENT_ID",
+        "viewName":"Client Id",
+        "type":"string"
+      }
+    ],
+    "methods": [
+    {
+        "name": "createUser",
+        "viewName": "Create a user",
+        "params": [
+          {
+            "name": "ACCESS_TOKEN",
+            "viewName": "Access token",
+            "type": "vault"
+          },
+          {
+            "name": "REFRESH_TOKEN",
+            "viewName": "Refresh Token",
+            "type": "vault"
+          },
+          {
+            "name": "SCOPE",
+            "viewName": "scope",
+            "type": "string"
+          },
+          {
+            "name": "CLIENT_ID",
+            "viewName": "client id",
+            "type": "string"
+          },
+          {
+            "name": "CLIENT_SECRET",
+            "viewName": "client secret",
+            "type": "vault"
+          },
+          {
+            "name": "FAMILY_NAME",
+            "viewName": "Family Name",
+            "type": "string"
+          },
+          {
+            "name": "GIVEN_NAME",
+            "viewName": "Given Name",
+            "type": "string"
+          },
+          {
+            "name": "PASSWORD",
+            "viewName": "Password",
+            "type": "string"
+          },
+          {
+            "name": "CHANGE_PASSWORD_NEXT_LOGIN",
+            "viewName": "Change password at next login",
+            "type": "boolean"
+          },
+          {
+            "name": "PRIMARY_EMAIL",
+            "viewName": "Primary Email",
+            "type": "string"
+          },
+          {
+            "name":"GROUPS",
+            "viewName":"Add user to groups",
+            "type": "string"
+          }
+        ]
+    },
+    {
+        "name": "addUserToGroup",
+        "viewName": "Add a user to a group",
+        "params": [
+          {
+            "name": "ACCESS_TOKEN",
+            "viewName": "Access token",
+            "type": "vault"
+          },
+          {
+            "name": "REFRESH_TOKEN",
+            "viewName": "Refresh Token",
+            "type": "vault"
+          },
+          {
+            "name": "SCOPE",
+            "viewName": "scope",
+            "type": "string"
+          },
+          {
+            "name": "CLIENT_ID",
+            "viewName": "client id",
+            "type": "string"
+          },
+          {
+            "name": "CLIENT_SECRET",
+            "viewName": "client secret",
+            "type": "vault"
+          },
+          {
+            "name": "GROUP_KEY",
+            "viewName": "Group Name",
+            "type": "string"
+          },
+          {
+            "name": "PRIMARY_EMAIL",
+            "viewName": "Primary Email",
+            "type": "string"
+          }
+        ]
+    }
+    ]
+  }
