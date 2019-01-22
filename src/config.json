@@ -1,10 +1,10 @@
 {
-    "name": "G-suite",
+    "name": "G-Suite",
     "type": "executer",
-    "imgUrl": "G+Suite.png",
+    "imgUrl": "gsuite.png",
     "execProgram": "node",
     "main": "app.js",
-    "version": "1.2.0",
+    "version": "1.0.0",
     "description": "",
     "settings":[
       {
@@ -76,6 +76,11 @@
           {
             "name": "CHANGE_PASSWORD_NEXT_LOGIN",
             "viewName": "Change password at next login",
+            "type": "boolean"
+          },
+          {
+            "name": "SUSPENDED",
+            "viewName": "Is suspended",
             "type": "boolean"
           },
           {

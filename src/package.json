@@ -1,14 +1,14 @@
 {
-    "name": "kaholo-plugin-G-Suite",
-    "version": "1.2.1",
-    "description": "",
-    "main": "app.js",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "Kaholo Team",
-    "license": "ISC",
-    "dependencies": {
-      "googleapi": "36.0.0"
-    }
+  "name": "kaholo-plugin-gsuite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kaholo Team",
+  "license": "ISC",
+  "dependencies": {
+    "googleapis": "36.0.0"
+  }
 }
