@@ -4,27 +4,17 @@
     "imgUrl": "gsuite.png",
     "execProgram": "node",
     "main": "app.js",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "",
     "settings":[
       {
-        "name":"ACCESS_TOKEN",
-        "viewName":"Access Token",
+        "name":"CREDENTIALS",
+        "viewName":"Credentials",
         "type":"vault"
       },
       {
-        "name":"REFRESH_TOKEN",
-        "viewName":"Refresh Token",
-        "type":"vault"
-      },
-      {
-        "name":"Client Secret",
-        "viewName":"Client Secret",
-        "type":"vault"
-      },
-      {
-        "name":"CLIENT_ID",
-        "viewName":"Client Id",
+        "name":"SUPER_ADMIN_EMAIL",
+        "viewName":"Super admin email",
         "type":"string"
       }
     ],
@@ -34,29 +24,14 @@
         "viewName": "Create a user",
         "params": [
           {
-            "name": "ACCESS_TOKEN",
-            "viewName": "Access token",
+            "name": "CREDENTIALS",
+            "viewName": "Credentials",
             "type": "vault"
           },
           {
-            "name": "REFRESH_TOKEN",
-            "viewName": "Refresh Token",
-            "type": "vault"
-          },
-          {
-            "name": "SCOPE",
-            "viewName": "scope",
-            "type": "string"
-          },
-          {
-            "name": "CLIENT_ID",
-            "viewName": "client id",
-            "type": "string"
-          },
-          {
-            "name": "CLIENT_SECRET",
-            "viewName": "client secret",
-            "type": "vault"
+            "name":"SUPER_ADMIN_EMAIL",
+            "viewName":"Super admin email",
+            "type":"string"
           },
           {
             "name": "FAMILY_NAME",
@@ -100,29 +75,14 @@
         "viewName": "Add a user to a group",
         "params": [
           {
-            "name": "ACCESS_TOKEN",
-            "viewName": "Access token",
+            "name": "CREDENTIALS",
+            "viewName": "Credentials",
             "type": "vault"
           },
           {
-            "name": "REFRESH_TOKEN",
-            "viewName": "Refresh Token",
-            "type": "vault"
-          },
-          {
-            "name": "SCOPE",
-            "viewName": "scope",
-            "type": "string"
-          },
-          {
-            "name": "CLIENT_ID",
-            "viewName": "client id",
-            "type": "string"
-          },
-          {
-            "name": "CLIENT_SECRET",
-            "viewName": "client secret",
-            "type": "vault"
+            "name":"SUPER_ADMIN_EMAIL",
+            "viewName":"Super admin email",
+            "type":"string"
           },
           {
             "name": "GROUP_KEY",
