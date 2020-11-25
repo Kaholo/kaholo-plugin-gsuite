@@ -9,6 +9,6 @@
   "author": "Kaholo Team",
   "license": "ISC",
   "dependencies": {
-    "googleapis": "36.0.0"
+    "googleapis": "65.0.0"
   }
 }
