@@ -4,8 +4,9 @@
     "imgUrl": "gsuite.png",
     "execProgram": "node",
     "main": "app.js",
-    "version": "1.1.0",
-    "description": "",
+    "version": "1.1.1",
+    "description": "Integration with Google G-Suite Service.",
+    "category": "ACCESS MGMT",
     "settings":[
       {
         "name":"CREDENTIALS",
